@@ -12,12 +12,12 @@ public class ShellSort {
         int[] array = new int[]{5, 23, 454, 2, 8, 234, 7, 12, 5434, 0};
         System.out.println("Original array: " + Arrays.toString(array));
 
-        bubbleSort(array);
+        shellSort(array);
 
         System.out.println("Sorted array: " + Arrays.toString(array));
     }
 
-    public static void bubbleSort(int[] array) {
+    public static void shellSort(int[] array) {
         //получаем шаг как средний эл-т, сначала рассматривается 0й элемент и 0+шаг, потом шаг опять на 2 уменьшается, 5->2->1
         //когда шаг = 1, то реализуется простой алгоритм вставками
         int gap = array.length / 2;

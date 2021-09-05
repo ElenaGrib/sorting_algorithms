@@ -19,7 +19,6 @@ public class BinarySearchIterative {
             middleIndex = startIndex + (endIndex - startIndex) / 2;
 
             if (array[middleIndex] == elementToFind) {
-                System.out.println("found " + elementToFind + " at " + middleIndex);
                 return middleIndex;
             }
 

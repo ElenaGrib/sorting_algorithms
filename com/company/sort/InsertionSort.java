@@ -1,5 +1,6 @@
 package com.company.sort;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 //алгоритм сортировки вставками лежит в основе Arrays.sort() (трешхолд для массивов 47)

@@ -1,5 +1,6 @@
 package com.company.trees;
 
+import java.util.Objects;
 import java.util.Stack;
 
 public class Tree {
@@ -21,6 +22,19 @@ public class Tree {
     int value;
     Tree left;
     Tree right;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tree tree = (Tree) o;
+        return value == tree.value && Objects.equals(left, tree.left) && Objects.equals(right, tree.right);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value, left, right);
+    }
 
     public Tree(int value, Tree left, Tree right) {
         this.value = value;

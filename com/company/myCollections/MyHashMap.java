@@ -118,4 +118,9 @@ public class MyHashMap<K, V> implements MyCollections {
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public Object get(int index) {
+        throw new UnsupportedOperationException();
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.company.myCollections;
 
+import com.company.sort.QuicksortGeneric;
 
 import java.util.Arrays;
 
@@ -17,6 +18,7 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
         array = newArray;
     }
 
+    @Override
     public int size() {
         return size;
     }
@@ -31,19 +33,8 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
     public T get(int index) {
         return (T) array[index];
     }
-//
-//    public MyArrayList<T> subList(int fromIndex, int toIndex) {
-//        if (toIndex - fromIndex <= 0) {
-//            throw new IndexOutOfBoundsException();
-//        } else {
-//            MyArrayList<T> subList = new MyArrayList<>();
-//            for (int i = fromIndex; i <= toIndex; i++) {
-//                subList.add(array[i]);
-//            }
-//            return subList;
-//        }
-//    }
 
+    @Override
     public boolean contains(Object o) {
         boolean result = false;
         for (int i = 0; i < array.length; i++) {
@@ -54,7 +45,6 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
         }
         return result;
     }
-
 
     public int indexOf(Object o) {
         int index = -1;
@@ -75,6 +65,7 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
             resize(array.length / 2); //уменьшаем массив, если элементов в TRIM_SIZE раз меньше чем (по аналогии с методом trim)
     }
 
+    @Override
     public void clear() {
         resize(0);
     }
@@ -87,6 +78,7 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
         }
     }
 
+    @Override
     public void sort() {
         int newSize = 0;
         for (int i = 0; i < array.length; i++) {
@@ -95,7 +87,7 @@ public class MyArrayList<T extends Comparable<? super T>> implements MyCollectio
             }
         }
         resize(newSize);
-        Arrays.sort(array);
+        QuicksortGeneric.quicksort(array, 0, array.length-1);
     }
 
 }

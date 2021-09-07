@@ -15,12 +15,14 @@ public class Main {
         Person person3 = new Person(3, "Stepanov", "Stepan", 30);
         Person person4 = new Person(4, "Ivanov", "Petr", 35);
         Person person5 = new Person(5, "Petrov", "Ivan", 40);
+        Person person6 = new Person(6, "Abramov", "Arhip", 45);
 
         list.add(person1);
         list.add(person2);
         list.add(person3);
         list.add(person4);
         list.add(person5);
+        list.add(person6);
 
         list.print();
 
@@ -33,23 +35,12 @@ public class Main {
         System.out.println("IndexOf person1: " + list.indexOf(person1));
         System.out.println("Get by index, 2: " + list.get(2));
         System.out.println("Get by index, 10: " + list.get(10));
-//        try {
-//            System.out.println("Get by index, 100: " + list.get(100));
-//        } catch (ArrayIndexOutOfBoundsException ex) {
-//            ex.printStackTrace();
-//        }
-
         System.out.println("Contains person4: " + list.contains(person4) + "\n");
 
-
+        System.out.println("---------Sorted Array-----------");
         list.sort();
 
         list.print();
-
-//        System.out.println("\nSubList:");
-//        MyArrayList<Person> mySubList = new MyArrayList<>();
-//        mySubList.subList(0,3);
-//        mySubList.print();
 
         System.out.println("\n//////////// MyHashMap ////////////");
         MyHashMap<Person, Integer> myHashMap = new MyHashMap<>();

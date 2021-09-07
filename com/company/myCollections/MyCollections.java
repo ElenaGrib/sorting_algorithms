@@ -8,4 +8,6 @@ public interface MyCollections<T> {
     public void clear();
 
     public void sort();
+
+    public T get(int index);
 }

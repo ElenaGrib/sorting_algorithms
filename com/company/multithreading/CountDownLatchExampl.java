@@ -16,7 +16,6 @@ public class CountDownLatchExampl {
             System.out.println("Value retrieved.");
         }
 
-        public static void main(String[] args) throws InterruptedException {
-        }
+
     }
 }

@@ -9,7 +9,7 @@ public class MyLoader extends ClassLoader {
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         byte[] bytes = new byte[0];
         try {
-            bytes = Files.readAllBytes(Paths.get(name));
+            bytes = Files.readAllBytes(Paths.get(name.replace(".", "/") + ".class").toAbsolutePath());
         } catch (IOException e) {
             e.printStackTrace();
         }

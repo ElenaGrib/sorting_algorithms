@@ -16,7 +16,7 @@ public class CustomClassLoaderDemo extends ClassLoader {
         InputStream is = getClass().getClassLoader().getResourceAsStream(className.replace(".", "/") + ".class");
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
-        //write into byte
+        //write into byte array
         int len = 0;
         try {
             while (true) {

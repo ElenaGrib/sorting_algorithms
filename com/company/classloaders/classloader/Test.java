@@ -1,4 +1,4 @@
-package com.company.classloaders.classloader4;
+package com.company.classloaders.classloader;
 
 public class Test {
     public void show() {

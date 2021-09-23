@@ -1,4 +1,4 @@
-package com.company.classloaders.classloader;
+package com.company.classloaders.classloader1;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
